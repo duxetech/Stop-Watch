@@ -23,6 +23,9 @@ class StopWatch {
     var currentLapTime = 0
     var interval : Double = 1/60
     
+    init(currentTime:Time) {
+        self.currentTime=currentTime
+    }
   
 
     func updateTimer() {

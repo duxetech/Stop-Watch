@@ -20,9 +20,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        watch = StopWatch()
+        watch = StopWatch(currentTime: Time(micro: 0, second: 0, minute: 0))
         
-        watch.currentTime = Time(micro: 0, second: 0, minute: 0)
         tableView.dataSource = self
         
         startButton.layer.cornerRadius=startButton.frame.width/2
