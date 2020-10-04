@@ -20,7 +20,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        watch = StopWatch(currentTime: Time(micro: 0, second: 0, minute: 0))
+        watch = StopWatch(totalTime: 0, timeString: "00:00.00", lastLapTime: 0, currentLapTime: 0)
         
         tableView.dataSource = self
         

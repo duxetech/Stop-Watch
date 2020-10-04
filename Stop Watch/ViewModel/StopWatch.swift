@@ -8,27 +8,24 @@
 
 import Foundation
 
-class StopWatch {
+struct StopWatch {
    
     var timer : Timer?
     var laps : [String] = []
 
     var currentTime : Time!
-    var totalTime = 0
+    var totalTime : Int
     
     var notStarted = true
-    var timeString = "00:00.00"
+    var timeString : String
     
-    var lastLapTime = 0
-    var currentLapTime = 0
+    var lastLapTime : Int
+    var currentLapTime : Int
     var interval : Double = 1/60
     
-    init(currentTime:Time) {
-        self.currentTime=currentTime
-    }
   
 
-    func updateTimer() {
+    mutating func updateTimer() {
         totalTime += 1
         currentTime = convertTime(time: totalTime)
     }
@@ -52,7 +49,7 @@ class StopWatch {
 
     }
     
-    func resetTime(){
+    mutating func resetTime(){
         totalTime = 0
         lastLapTime = 0
         currentLapTime = 0
